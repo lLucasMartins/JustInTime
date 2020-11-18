@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./edita-tarefa/edita-tarefa.module').then( m => m.EditaTarefaPageModule)
   },
   {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
