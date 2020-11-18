@@ -9,13 +9,21 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { IonicStorageModule } from '@ionic/storage';
 import { DatePipe } from '@angular/common';
 import {StorageService} from './services/storage.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService } from './services/authentication/authentication.service';
 
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireAuthModule} from 'angularfire2/auth';
+// Add the Firebase services that you want to use
+import "firebase/auth";
+import "firebase/firestore";
+
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import * as firebase from 'firebase';
+import { environment } from 'src/environments/environment';
+/*firebase.initializeApp(environment.firebase);*/
 
 
 const firebaseConfig = {
@@ -36,15 +44,16 @@ const firebaseConfig = {
     IonicModule.forRoot(),
     AppRoutingModule,
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig),
-    HttpClientModule,
-    AngularFireModule
+    AngularFireAuthModule,
+    /*AngularFireModule.initializeApp(firebaseConfig),*/
+    HttpClientModule
   ],
   providers: [
     StorageService,
     DatePipe,
     StatusBar,
     SplashScreen,
+    AuthenticationService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy,
      },
   ],

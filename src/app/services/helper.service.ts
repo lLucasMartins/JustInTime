@@ -6,6 +6,7 @@ import { NavController, AlertController } from '@ionic/angular';
   providedIn: 'root'
 })
 export class HelperService {
+  token: any;
 
   constructor(
     private navCtrl: NavController,

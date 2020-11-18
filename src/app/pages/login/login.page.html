@@ -11,17 +11,19 @@
 <ion-content>
   <div class="container ion-text-center">
     <p>Faça Login na sua Conta</p>
-    <div class="visitante">
-      <ion-item>
-        <ion-label position="stacked" color="primary">Email</ion-label>
-        <ion-input type="email" color="light"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked" color="primary">Senha</ion-label>
-        <ion-input type="password" color="light"></ion-input>
-      </ion-item>
-      <ion-button expand="block">Entrar</ion-button>
-    </div>
+    <form #f="ngForm" class="form" (submit)="validLogin(f)">
+      <div class="visitante">
+        <ion-item>
+          <ion-label position="stacked" color="primary">Email</ion-label>
+          <ion-input type="text" color="light" name="email" minlength=3 [(ngModel)]="email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" color="primary" name="password" minlength=6 [(ngModel)]="password" required>Senha</ion-label>
+          <ion-input type="password" color="light"></ion-input>
+        </ion-item>
+        <ion-button expand="block" type="submit" name="buttonLogin">Entrar</ion-button>
+      </div>
+    </form>
     <div class="logos">
       <a href="">
         <ion-icon name="logo-google" id="Google"></ion-icon>
