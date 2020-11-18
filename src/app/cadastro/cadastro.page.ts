@@ -31,12 +31,12 @@ export class CadastroPage implements OnInit {
     return email;
   }
 
-  /*sendForm(f: NgForm) {
+  sendForm(f: NgForm) {
     const url = environment.apiUrl + '/saveForm';
     const dataIn = {
       contact: this.contactField,
-      message: this.messageField,
-      token: this.authentication.token
+      message: this.messageField
+      /*token: this.authentication.token*/
     };
     this.http.post(url, dataIn)
       .subscribe(dataOut => {
@@ -44,5 +44,5 @@ export class CadastroPage implements OnInit {
       }, error => {
         console.log(error.message);
       });
-  }*/
+  }
 }

@@ -4,17 +4,19 @@
 
 export const environment = {
   production: false,
+
+  apiUrl: 'https://justintime-agenda09.firebaseio.com',
   firebase: {
-    apiKey: "AIzaSyCLW-IAM-pgLK1RYHjxAth8ehjX2G8FMTQ",
-    authDomain: "justintime-ad54b.firebaseapp.com",
-    databaseURL: "https://justintime-ad54b.firebaseio.com",
-    projectId: "justintime-ad54b",
-    storageBucket: "justintime-ad54b.appspot.com",
-    messagingSenderId: "679504460481",
-    appId: "1:679504460481:web:3aa81e53c468ec289e7240",
-    measurementId: "G-0BL8VW6HWS"
+    apiKey: 'AIzaSyAK7KtobUF-gLI-kuOdOLJQF4Y7t6YbFg0',
+    authDomain: 'justintime-agenda09.firebaseapp.com',
+    databaseURL: 'https://justintime-agenda09.firebaseio.com',
+    projectId: 'justintime-agenda09',
+    storageBucket: 'justintime-agenda09.appspot.com',
+    messagingSenderId: '217130582176',
+    appId: '1:217130582176:web:acc06f352db02db60f09c5'
   }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

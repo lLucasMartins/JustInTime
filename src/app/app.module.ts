@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { DatePipe } from '@angular/common';
 import {StorageService} from './services/storage.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth';
@@ -36,6 +37,7 @@ const firebaseConfig = {
     AppRoutingModule,
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
+    HttpClientModule,
     AngularFireModule
   ],
   providers: [
