@@ -1,0 +1,112 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title color="primary" align="center">
+
+      Just In Time
+
+    </ion-title>
+
+  </ion-toolbar>
+  <ion-toolbar>
+
+    <ion-title color="primary">
+
+      Lista de Tarefas
+
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+ 
+
+<ion-content>
+
+  <ion-list *ngFor="let item of tarefas" class="itens">
+
+ 
+
+    <!--  Lista com sliding com os itens cadastrados.
+
+      saiba mais sobre o ion-sliding em https://ionicframework.com/docs/api/item-sliding -->
+
+ 
+
+    <ion-item-sliding class="itens">
+
+      <!-- A ngClass tarefa-concluida colocará um tachado sobre o 
+
+      nome da tarefa que for marcada como concluída a classe está no arquivo home.page.scss -->
+
+      <ion-item [ngClass]="{'tarefa-concluida': item.tarefa.status }">
+
+        <ion-label color="light">
+
+            <h1>{{ item.tarefa.nome }}</h1>
+
+            <p>{{ item.tarefa.local }}<!-- - {{ item.tarefa.data | date:'dd/MM/yyyy'}}--> </p>            
+
+        </ion-label>
+
+        <ion-toggle color="primary" [checked]='item.tarefa.tipo' disabled></ion-toggle>
+
+      </ion-item>
+      
+
+      <!-- Botões de edição e exclusão só aparecerão quando o 
+
+        usuário segurar e arrastar o item para a esquerda da tela -->
+
+      <ion-item-options >
+
+        <ion-item-option color="transparent">
+
+          <!-- chama o método editaTarefa passando o item para edição -->
+
+          <ion-icon slot="start" name="create" size="large" (click)="editaTarefa(item);" color="danger"></ion-icon>
+
+         
+
+        </ion-item-option>
+
+        <ion-item-option color="transparent">
+
+           <!-- chama o método removeTarefa passando o item para exclusão -->
+
+          <ion-icon slot="start" name="trash" size="large" (click)="removeTarefa(item);" color="danger"></ion-icon>
+
+         
+
+        </ion-item-option>
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+ 
+
+  </ion-list>
+
+<!-- Botão ion-fab para chamar a página para inserção de contato
+
+  saiba mais sobre o ion-fab no link https://ionicframework.com/docs/api/fab -->
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+      <ion-fab-button [routerLink]="['/', 'edita-tarefa']" color="primary">
+
+        <ion-icon name="add" ></ion-icon>
+
+      </ion-fab-button>
+
+  </ion-fab>
+
+</ion-content>
+<ion-footer>
+  <ion-button [routerLink]="['/', 'perfil']">Pagina de Perfil</ion-button>
+  <button (click)="socialSignIn()">Logar com uma conta
+    Google</button>
+</ion-footer>

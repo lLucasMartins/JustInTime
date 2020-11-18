@@ -1,0 +1,28 @@
+ion-content{
+    --background: #3a3a3a;
+  }
+ion-toolbar{
+    --background: #3a3a3a;
+  }
+p{
+    color: white;
+    font-size: 25px;
+}
+ion-icon{
+    font-size: 64px;
+}
+ion-item{
+    --background: #3a3a3a;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+#Google{
+    color: #EA4335;
+}
+#Facebook{
+    color: #3b5998;
+}

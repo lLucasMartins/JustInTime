@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "146667461611",
+    "firebase_url": "https://just-in-time-293800.firebaseio.com",
+    "project_id": "just-in-time-293800",
+    "storage_bucket": "just-in-time-293800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146667461611:android:2eb4d0e1150a11a539d7ae",
+        "android_client_info": {
+          "package_name": "JustInTime.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146667461611-rvs00tj816c145dcp4chddg87iecagfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9aOMutcNhVJfBxnoeGQHAC0Q_pLCHGr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146667461611-rvs00tj816c145dcp4chddg87iecagfu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "146667461611-qvuah5ggmj9vme1v5cepsbjsavepbcrq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "JustInTime.application"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

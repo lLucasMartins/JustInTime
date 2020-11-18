@@ -1,0 +1,79 @@
+<!--<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title color="primary" align="center">
+
+      Just In Time
+
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+
+  <ion-item>
+
+    <ion-label position="floating" color="light">Nome Completo</ion-label>
+
+    <ion-input type="text" name="nome" [(ngModel)]="model.nome" color="light"></ion-input>
+
+  </ion-item> 
+
+  <ion-item>
+
+    <ion-label position="floating" color="light">Data de Nascimento</ion-label>
+
+    <ion-datetime displayFormat="DD/MM/YYYY" name="data" [(ngModel)]="model.data"></ion-datetime>
+
+  </ion-item>
+
+</ion-content>-->
+
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title color="primary" align="center">
+
+      Just In Time
+
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+ 
+
+<ion-content>
+
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+
+  <ion-item>
+    <ion-label color="light" position="floating">Nome Completo</ion-label>
+    <ion-input color="light"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" color="light">Data de Nascimento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" color="light"></ion-datetime>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-button slot="end" color="transparent">
+      <ion-icon name="checkmark-outline" color="primary"></ion-icon>
+    </ion-button>
+  </ion-item>
+  
+  <button (click)="socialSignIn()">Logar com uma conta
+    Google</button>
+
+</ion-content>

@@ -1,0 +1,89 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+      <ion-buttons slot="start">
+
+          <ion-back-button></ion-back-button>
+
+        </ion-buttons>
+
+    <ion-title color="light">Editar Tarefa</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<!-- Formulário para adição ou edição de tarefa -->
+
+<ion-content>
+
+  
+
+  <ion-item>
+
+    <ion-label position="floating" color="light">Nome da Tarefa</ion-label>
+
+    <ion-input type="text" name="nome" [(ngModel)]="model.nome" color="light"></ion-input>
+
+  </ion-item> 
+
+  <!--<ion-item>
+
+    <ion-label position="floating" color="light">Quantidade</ion-label>
+
+    <ion-input type="number" name="local" [(ngModel)]="model.local" color="light"></ion-input>
+
+  </ion-item>-->
+
+  <ion-item>
+    <ion-radio-group value="biff">
+      <ion-list-header>
+        <ion-label color="light">Repetir</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label color="light">Só Hoje</ion-label>
+        <ion-radio slot="start" value="biff"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="light">De Seg a Sex</ion-label>
+        <ion-radio slot="start" value="griff"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="light">Diariamente</ion-label>
+        <ion-radio slot="start" value="buford"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label color="light">Ligar</ion-label>
+    <ion-toggle color="primary" [(ngModel)]="model.tipo" name="tipo"></ion-toggle>
+
+  </ion-item>
+
+  <!--<ion-item>
+
+    <ion-label position="floating">Data</ion-label>
+
+    <ion-datetime displayFormat="DD/MM/YYYY" name="data" [(ngModel)]="model.data"></ion-datetime>
+
+  </ion-item> 
+
+  <ion-item>
+
+    <ion-label >Concluida</ion-label>
+
+    <ion-checkbox name="status" [(ngModel)]="model.status"></ion-checkbox>
+
+  </ion-item>-->
+
+  
+
+  <ion-button expand="block"  (click)="save()">Salvar</ion-button>
+
+</ion-content>
